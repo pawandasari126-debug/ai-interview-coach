@@ -1,0 +1,9 @@
+streamlit
+groq
+pandas
+pypdf
+reportlab
+SpeechRecognition
+pyaudio
+cv2
+deepface
