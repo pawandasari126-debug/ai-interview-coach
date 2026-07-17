@@ -1,9 +1,11 @@
 streamlit
 groq
 pandas
+numpy
+plotly
 pypdf
 reportlab
 SpeechRecognition
-pyaudio
-cv2
+opencv-python-headless
 deepface
+tf-keras
