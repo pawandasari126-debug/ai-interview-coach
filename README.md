@@ -113,6 +113,7 @@ GROQ_API_KEY="YOUR_GROQ_API_KEY"
 ### Run the application
 
 ```bash
+streamlit run app.py
 python -m streamlit run app.py
 ```
 
