@@ -151,9 +151,15 @@ TOTAL_QUESTIONS = 10
 # =====================================================
 # GROQ CLIENT
 # =====================================================
-client = Groq(
-    api_key=st.secrets["GROQ_API_KEY"]
-)
+import os
+import streamlit as st
+
+api_key = os.getenv("GROQ_API_KEY")
+
+if api_key is None:
+    api_key = st.secrets["GROQ_API_KEY"]
+
+client = Groq(api_key=api_key)
 
 # =====================================================
 # TITLE
@@ -923,7 +929,7 @@ if page == "🎤 Interview Round":
     )
 
     st.info(
-    "📄 Upload your resume to generate resume-based interview questions."
+    "📄 Upload your resume to analyze the resume or generate resume-based interview questions."
     )
 
     resume_text = ""
