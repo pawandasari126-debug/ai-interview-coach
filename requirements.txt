@@ -7,5 +7,6 @@ pypdf
 reportlab
 SpeechRecognition
 opencv-python-headless
-deepface
-tf-keras
+tensorflow==2.16.1
+tf-keras==2.16.0
+deepface==0.0.95
