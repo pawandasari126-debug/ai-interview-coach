@@ -17,6 +17,7 @@ from deepface import DeepFace
 from streamlit_webrtc import webrtc_streamer, VideoTransformerBase
 import av
 from datetime import datetime
+from zoneinfo import ZoneInfo
 import base64
 import plotly.express as px
 import plotly.graph_objects as go
@@ -392,7 +393,7 @@ if page == "🏠 Home":
     animation_length="2"
     )
 
-    hour = datetime.now().hour
+    hour = datetime.now(ZoneInfo("Asia/Kolkata")).hour
 
     if hour < 12:
         greet = "☀ Good Morning"
@@ -406,7 +407,7 @@ if page == "🏠 Home":
     st.markdown(f"# {greet},👋")
 
     st.caption(
-    datetime.now().strftime("%A, %d %B %Y • %I:%M %p")
+    datetime.now(ZoneInfo("Asia/Kolkata")).strftime("%A, %d %B %Y • %I:%M %p")
     )
 
     st.markdown("""
