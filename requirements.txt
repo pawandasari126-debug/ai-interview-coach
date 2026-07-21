@@ -1,4 +1,6 @@
 streamlit
+streamlit-extras
+streamlit-webrtc
 groq
 pandas
 numpy
